@@ -1,7 +1,10 @@
 steps:
   - plugins:
-      - seek-oss/docker-ecr-cache#v1.1.1
-      - docker#v2.9.0
+      - seek-oss/docker-ecr-cache#v1.1.1:
+          dockerfile: Dockerfile
+      - docker#v2.9.0:
+          volumes:
+            - /workdir/node_modules
 
   - plugins:
       - docker-compose#v3.0.0:
