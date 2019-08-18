@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "aws-sdk": "2.511.0",
     "lodash.memoize": "4.1.1",
     "lodash.once": "^4.0.0"
   },
@@ -10,9 +11,6 @@
     "ts-node": "^7.0.0",
     "tsconfig-seek": "1.0.1",
     "typescript": "2.9.1"
-  },
-  "peerDependencies": {
-    "aws-sdk": "1"
   },
   "license": "MIT",
   "repository": {
