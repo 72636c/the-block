@@ -8,6 +8,8 @@
   "devDependencies": {
     "@types/lodash.memoize": "4.1.0",
     "@types/lodash.once": "4.1.0",
+    "jest": "24.9.0",
+    "lodash.foreach": "4.5.0",
     "ts-node": "^7.0.0",
     "tsconfig-seek": "1.0.1",
     "typescript": "2.9.1"
