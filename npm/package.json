@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "apollo-server-koa": "2.4.0",
+    "apollo-server-koa": "2.9.2",
     "lodash.memoize": "4.1.1",
     "lodash.once": "^4.0.0"
   },
