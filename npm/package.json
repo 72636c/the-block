@@ -2,7 +2,8 @@
   "dependencies": {
     "apollo-server-koa": "2.4.0",
     "lodash.memoize": "4.1.1",
-    "lodash.once": "^4.0.0"
+    "lodash.once": "^4.0.0",
+    "snyk": "^1.316.1"
   },
   "description": "Renovate testbed",
   "devDependencies": {
@@ -20,5 +21,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/72636c/the-block.git"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
