@@ -6,7 +6,7 @@
     //   extends: ['github>seek-oss/rynovate'],
     // },
     {
-      // paths: ['yarn/**'],
+      paths: ['yarn/**'],
 
       managers: ['buildkite', 'gomod', 'npm', 'nvm'],
       // packagePatterns: ['*'],
@@ -22,7 +22,7 @@
       //   'preview:dockerCompose',
       //   'docker:disableMajor',
       // ],
-      branchPrefix: 'renovate-template/',
+      branchPrefix: 'renovate-template1/',
       // commitMessageAction: '',
       // ignoreNpmrcFile: true,
       // lazyGrouping: false,
