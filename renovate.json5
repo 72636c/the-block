@@ -1,24 +1,13 @@
 {
   packageRules: [
-    // {
-    //   paths: ['.buildkite/**', 'gomod/**', '*'],
+    {
+      paths: ['.buildkite/**', 'gomod/**', '*'],
 
-    //   extends: ['github>seek-oss/rynovate'],
-    // },
+      extends: ['github>seek-oss/rynovate'],
+    },
     {
       paths: ['yarn/**'],
 
-      // extends: [
-      //   ':prHourlyLimit2',
-      //   ':prNotPending',
-      //   ':rebaseStalePrs',
-      //   ':semanticCommits',
-      //   ':timezone(Australia/Melbourne)',
-      //   ':updateNotScheduled',
-      //   'preview:buildkite',
-      //   'preview:dockerCompose',
-      //   'docker:disableMajor',
-      // ],
       branchPrefix: 'renovate-template1/',
       commitMessageAction: '',
       ignoreNpmrcFile: true,
@@ -30,6 +19,21 @@
       schedule: 'before 7am on every weekday',
       semanticCommitScope: 'template',
       semanticCommitType: 'fix',
+    },
+    {
+      paths: ['yarn/**'],
+
+      extends: [
+        ':prHourlyLimit2',
+        ':prNotPending',
+        ':rebaseStalePrs',
+        ':semanticCommits',
+        ':timezone(Australia/Melbourne)',
+        ':updateNotScheduled',
+        'preview:buildkite',
+        'preview:dockerCompose',
+        'docker:disableMajor',
+      ],
     },
     {
       managers: ['buildkite', 'gomod', 'npm', 'nvm'],
