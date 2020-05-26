@@ -8,9 +8,6 @@
     {
       paths: ['yarn/**'],
 
-      managers: ['buildkite', 'gomod', 'npm', 'nvm'],
-      // packagePatterns: ['*'],
-
       // extends: [
       //   ':prHourlyLimit2',
       //   ':prNotPending',
@@ -23,33 +20,33 @@
       //   'docker:disableMajor',
       // ],
       branchPrefix: 'renovate-template1/',
-      // commitMessageAction: '',
-      // ignoreNpmrcFile: true,
-      // lazyGrouping: false,
-      // postUpdateOptions: ['yarnDedupeHighest'],
-      // prConcurrentLimit: 3,
-      // prNotPendingHours: 1,
-      // rangeStrategy: 'auto',
-      // schedule: 'before 7am on every weekday',
-      // semanticCommitScope: 'template',
-      // semanticCommitType: 'fix',
+      commitMessageAction: '',
+      ignoreNpmrcFile: true,
+      lazyGrouping: false,
+      postUpdateOptions: ['yarnDedupeHighest'],
+      prConcurrentLimit: 3,
+      prNotPendingHours: 1,
+      rangeStrategy: 'auto',
+      schedule: 'before 7am on every weekday',
+      semanticCommitScope: 'template',
+      semanticCommitType: 'fix',
     },
-    // {
-    //   managers: ['buildkite', 'gomod', 'npm', 'nvm'],
-    //   paths: ['yarn/**'],
+    {
+      managers: ['buildkite', 'gomod', 'npm', 'nvm'],
+      paths: ['yarn/**'],
 
-    //   commitMessageExtra: '{{newValue}}',
-    //   commitMessageTopic: '{{depName}}',
-    // },
-    // {
-    //   excludePackagePatterns: ['^seek-jobs/', '^seek-oss/'],
-    //   managers: ['buildkite'],
-    //   paths: ['yarn/**'],
+      commitMessageExtra: '{{newValue}}',
+      commitMessageTopic: '{{depName}}',
+    },
+    {
+      excludePackagePatterns: ['^seek-jobs/', '^seek-oss/'],
+      managers: ['buildkite'],
+      paths: ['yarn/**'],
 
-    //   commitMessageExtra: '',
-    //   groupName: 'buildkite plugins',
-    //   managerBranchPrefix: '',
-    //   recreateClosed: true,
-    // },
+      commitMessageExtra: '',
+      groupName: 'buildkite plugins',
+      managerBranchPrefix: '',
+      recreateClosed: true,
+    },
   ],
 }
