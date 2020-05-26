@@ -3,7 +3,6 @@
     ':prHourlyLimit2',
     ':prNotPending',
     ':rebaseStalePrs',
-    ':semanticCommits',
     ':timezone(Australia/Melbourne)',
     ':updateNotScheduled',
     'preview:buildkite',
@@ -21,6 +20,7 @@
 
       branchPrefix: 'renovate-template1/',
       commitMessageAction: '',
+      commitMessagePrefix: 'fix(template):',
       ignoreNpmrcFile: true,
       lazyGrouping: false,
       postUpdateOptions: ['yarnDedupeHighest'],
@@ -28,8 +28,6 @@
       prNotPendingHours: 1,
       rangeStrategy: 'auto',
       schedule: 'before 7am on every weekday',
-      semanticCommitScope: 'template',
-      semanticCommitType: 'fix',
     },
     {
       managers: ['buildkite', 'gomod', 'npm', 'nvm'],
