@@ -1,5 +1,4 @@
 {
-  ignorePaths: ['npm/**'],
   packageRules: [
     // {
     //   paths: ['.buildkite/**', 'gomod/**', '*'],
