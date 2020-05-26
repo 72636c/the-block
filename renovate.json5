@@ -1,11 +1,11 @@
 {
   ignorePaths: ['npm/**'],
   packageRules: [
-    {
-      paths: ['.buildkite/**', 'gomod/**', '*'],
+    // {
+    //   paths: ['.buildkite/**', 'gomod/**', '*'],
 
-      extends: ['github>seek-oss/rynovate'],
-    },
+    //   extends: ['github>seek-oss/rynovate'],
+    // },
     {
       paths: ['yarn/**'],
 
