@@ -18,7 +18,7 @@
     {
       paths: ['yarn/**'],
 
-      branchPrefix: 'renovate-template1/',
+      branchPrefix: 'renovate-template/',
       commitMessageAction: '',
       commitMessagePrefix: 'fix(template):',
       ignoreNpmrcFile: true,
@@ -26,7 +26,7 @@
       postUpdateOptions: ['yarnDedupeHighest'],
       prConcurrentLimit: 3,
       prNotPendingHours: 1,
-      rangeStrategy: 'auto',
+      rangeStrategy: 'replace',
       schedule: 'before 7am on every weekday',
     },
     {
