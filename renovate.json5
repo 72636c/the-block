@@ -8,8 +8,8 @@
     {
       // paths: ['yarn/**'],
 
-      // managers: ['buildkite', 'gomod', 'npm', 'nvm'],
-      packagePatterns: ['*'],
+      managers: ['buildkite', 'gomod', 'npm', 'nvm'],
+      // packagePatterns: ['*'],
 
       // extends: [
       //   ':prHourlyLimit2',
