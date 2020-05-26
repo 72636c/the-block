@@ -1,0 +1,53 @@
+{
+  ignorePaths: ['npm/**'],
+  packageRules: [
+    {
+      paths: ['.buildkite/**', 'gomod/**', '*'],
+
+      extends: ['github>seek-oss/rynovate'],
+    },
+    // {
+    //   paths: ['yarn/**'],
+
+    //   extends: [
+    //     ':prHourlyLimit2',
+    //     ':prNotPending',
+    //     ':rebaseStalePrs',
+    //     ':semanticCommits',
+    //     ':timezone(Australia/Melbourne)',
+    //     ':updateNotScheduled',
+    //     'preview:buildkite',
+    //     'preview:dockerCompose',
+    //     'docker:disableMajor',
+    //   ],
+    //   branchPrefix: 'renovate-template/',
+    //   commitMessageAction: '',
+    //   ignoreNpmrcFile: true,
+    //   lazyGrouping: false,
+    //   postUpdateOptions: ['yarnDedupeHighest'],
+    //   prConcurrentLimit: 3,
+    //   prNotPendingHours: 1,
+    //   rangeStrategy: 'auto',
+    //   schedule: 'before 7am on every weekday',
+    //   semanticCommitScope: 'template',
+    //   semanticCommitType: 'fix',
+    // },
+    // {
+    //   managers: ['buildkite', 'gomod', 'npm', 'nvm'],
+    //   paths: ['yarn/**'],
+
+    //   commitMessageExtra: '{{newValue}}',
+    //   commitMessageTopic: '{{depName}}',
+    // },
+    // {
+    //   excludePackagePatterns: ['^seek-jobs/', '^seek-oss/'],
+    //   managers: ['buildkite'],
+    //   paths: ['yarn/**'],
+
+    //   commitMessageExtra: '',
+    //   groupName: 'buildkite plugins',
+    //   managerBranchPrefix: '',
+    //   recreateClosed: true,
+    // },
+  ],
+}
