@@ -7,7 +7,8 @@
     //   extends: ['github>seek-oss/rynovate'],
     // },
     {
-      paths: ['yarn/**'],
+      // paths: ['yarn/**'],
+      managers: ['buildkite', 'gomod', 'npm', 'nvm'],
 
       extends: [
         ':prHourlyLimit2',
