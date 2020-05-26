@@ -1,4 +1,15 @@
 {
+  extends: [
+    ':prHourlyLimit2',
+    ':prNotPending',
+    ':rebaseStalePrs',
+    ':semanticCommits',
+    ':timezone(Australia/Melbourne)',
+    ':updateNotScheduled',
+    'preview:buildkite',
+    'preview:dockerCompose',
+    'docker:disableMajor',
+  ],
   packageRules: [
     {
       paths: ['.buildkite/**', 'gomod/**', '*'],
@@ -19,21 +30,6 @@
       schedule: 'before 7am on every weekday',
       semanticCommitScope: 'template',
       semanticCommitType: 'fix',
-    },
-    {
-      paths: ['yarn/**'],
-
-      extends: [
-        ':prHourlyLimit2',
-        ':prNotPending',
-        ':rebaseStalePrs',
-        ':semanticCommits',
-        ':timezone(Australia/Melbourne)',
-        ':updateNotScheduled',
-        'preview:buildkite',
-        'preview:dockerCompose',
-        'docker:disableMajor',
-      ],
     },
     {
       managers: ['buildkite', 'gomod', 'npm', 'nvm'],
