@@ -1,4 +1,0 @@
-steps:
-  - plugins:
-      - docker#v3.0.0:
-          run: app1
