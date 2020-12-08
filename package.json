@@ -3,5 +3,7 @@
     "lodash.memoize": "4.1.1"
   },
   "description": "Renovate testbed",
-  "devDependencies": {}
+  "devDependencies": {
+    "ts-node-dev": "1.0.0-pre.63"
+  }
 }
