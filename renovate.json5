@@ -1,12 +1,9 @@
 {
+  extends: ['github>seek-oss/rynovate'],
   packageRules: [
     {
-      packagePatterns: ['*'],
-      extends: ['github>seek-oss/rynovate'],
-    },
-    {
-      packagePatterns: ['*'],
-      semanticCommitType: 'deps',
+      packageNames: ['ts-node-dev'],
+      allowedVersions: '!/1\\.0\\.0$/',
     },
   ],
 }
