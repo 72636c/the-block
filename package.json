@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "lodash.memoize": "4.1.1"
+  },
+  "description": "Renovate testbed",
+  "devDependencies": {}
+}
