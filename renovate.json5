@@ -13,6 +13,8 @@
   "lockFileMaintenance": {
     "automerge": true,
     "enabled": true,
+    "groupName": "lockfile maintenance",
+    "prPriority": 99,
     "schedule": "every 2 weeks on Wednesday"
   },
   "packageRules": [
@@ -46,7 +48,7 @@
       "groupName": "npm definitely typed",
       "managers": ["npm"],
       "packagePatterns": ["^@types/"],
-      "prPriority": 99,
+      "prPriority": 98,
       "recreateClosed": true,
       "schedule": "before 3am on Tuesday"
     },
@@ -92,7 +94,7 @@
     {
       "packageNames": ["braid-design-system", "sku", "skuba"],
       "packagePatterns": ["^@?seek", "seek$"],
-      "prPriority": 98,
+      "prPriority": 97,
       "schedule": "after 3am and before 6am on every weekday"
     },
     {
@@ -134,7 +136,7 @@
     },
     {
       "automerge": true,
-      "prPriority": 99,
+      "prPriority": 98,
       "schedule": "before 3am on every weekday",
       "updateTypes": ["pin"]
     }
