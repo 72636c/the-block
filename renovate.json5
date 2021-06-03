@@ -11,11 +11,7 @@
     "docker:disableMajor"
   ],
   "lockFileMaintenance": {
-    "automerge": true,
-    "enabled": true,
-    "groupName": "lockfile maintenance",
-    "prPriority": 99,
-    "schedule": "every 2 weeks on Wednesday"
+    "enabled": true
   },
   "packageRules": [
     {
@@ -48,9 +44,10 @@
       "groupName": "npm definitely typed",
       "managers": ["npm"],
       "packagePatterns": ["^@types/"],
-      "prPriority": 98,
+      "prPriority": 99,
       "recreateClosed": true,
-      "schedule": "before 3am on Tuesday"
+      "schedule": "before 3am on Tuesday",
+      "updateTypes": ["major", "minor", "patch"]
     },
     {
       "commitMessageExtra": "",
@@ -60,7 +57,8 @@
       "groupName": "npm dev dependencies",
       "managers": ["npm"],
       "recreateClosed": true,
-      "schedule": "after 3am and before 6am on Tuesday"
+      "schedule": "after 3am and before 6am on Tuesday",
+      "updateTypes": ["major", "minor", "patch"]
     },
     {
       "commitMessageExtra": "",
@@ -70,7 +68,8 @@
       "groupName": "npm peer dependencies",
       "managers": ["npm"],
       "recreateClosed": true,
-      "schedule": "after 3am and before 6am on Tuesday"
+      "schedule": "after 3am and before 6am on Tuesday",
+      "updateTypes": ["major", "minor", "patch"]
     },
     {
       "commitMessageExtra": "",
@@ -94,7 +93,7 @@
     {
       "packageNames": ["braid-design-system", "sku", "skuba"],
       "packagePatterns": ["^@?seek", "seek$"],
-      "prPriority": 97,
+      "prPriority": 98,
       "schedule": "after 3am and before 6am on every weekday"
     },
     {
@@ -136,7 +135,15 @@
     },
     {
       "automerge": true,
-      "prPriority": 98,
+      "groupName": "lock file maintenance",
+      "prPriority": 99,
+      "recreateClosed": true,
+      "schedule": "every 2 weeks on Wednesday",
+      "updateTypes": ["lockFileMaintenance"]
+    },
+    {
+      "automerge": true,
+      "prPriority": 99,
       "schedule": "before 3am on every weekday",
       "updateTypes": ["pin"]
     }
