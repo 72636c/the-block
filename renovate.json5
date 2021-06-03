@@ -135,9 +135,7 @@
     },
     {
       "automerge": true,
-      "groupName": "lock file maintenance",
       "prPriority": 99,
-      "recreateClosed": true,
       "schedule": "every 2 weeks on Wednesday",
       "updateTypes": ["lockFileMaintenance"]
     },
