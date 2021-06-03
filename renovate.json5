@@ -1,5 +1,10 @@
 {
   extends: ['github>seek-oss/rynovate'],
+  "lockFileMaintenance": {
+    "automerge": true,
+    "enabled": true,
+    "schedule": "every 2 weeks on Wednesday"
+  },
   packageRules: [
     {
       packageNames: ['ts-node-dev'],
