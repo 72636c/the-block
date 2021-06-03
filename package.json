@@ -1,9 +1,13 @@
 {
   "dependencies": {
+    "aws-sdk": "2.0.0",
+    "gaxios": "4.2.0",
+    "graphql": "14.0.0",
     "lodash.memoize": "4.1.1"
   },
   "description": "Renovate testbed",
   "devDependencies": {
+    "skuba": "3.10.0",
     "ts-node-dev": "1.0.0-pre.63"
   }
 }
