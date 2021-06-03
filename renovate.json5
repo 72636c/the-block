@@ -18,6 +18,7 @@
       "groupName": "all dependencies",
       "recreateClosed": true,
       "schedule": "before 7am on Monday",
+      "semanticCommitType": "fix",
       "updateTypes": [
         "bump",
         "digest",
@@ -60,6 +61,6 @@
   "prNotPendingHours": 1,
   "schedule": "before 7am on every weekday",
   "semanticCommitScope": "",
-  "semanticCommitType": "fix",
+  "semanticCommitType": "deps",
   "separateMajorMinor": false
 }
