@@ -7,6 +7,9 @@
   },
   "description": "Renovate testbed",
   "devDependencies": {
+    "@graphql-inspector/diff-command": "2.4.0",
+    "@graphql-inspector/loaders": "2.4.0",
+    "@graphql-inspector/url-loader": "2.4.0",
     "skuba": "3.10.0",
     "ts-node-dev": "1.0.0-pre.63"
   }
