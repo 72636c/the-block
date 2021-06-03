@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "aws-sdk": "2.0.0",
+    "apollo-server-koa": "2.4.0",
+    "apollo-server-testing": "2.4.0",
     "gaxios": "4.2.0",
     "graphql": "14.0.0",
     "lodash.memoize": "4.1.1"
@@ -10,6 +12,8 @@
     "@graphql-inspector/diff-command": "2.4.0",
     "@graphql-inspector/loaders": "2.4.0",
     "@graphql-inspector/url-loader": "2.4.0",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
     "skuba": "3.10.0",
     "ts-node-dev": "1.0.0-pre.63"
   }
