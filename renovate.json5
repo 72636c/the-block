@@ -1,58 +1,106 @@
 {
   "extends": [
-    ":prHourlyLimit2",
-    ":prNotPending",
+    ":prHourlyLimit4",
     ":rebaseStalePrs",
     ":renovatePrefix",
     ":semanticCommits",
     ":timezone(Australia/Melbourne)",
+    ":updateNotScheduled",
     "preview:buildkite",
-    "preview:dockerCompose"
+    "preview:dockerCompose",
+    "docker:disableMajor"
   ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
-      "excludePackageNames": ["seek-jobs/gantry"],
-      "matchUpdateTypes": [
-        "bump",
-        "digest",
-        "major",
-        "minor",
-        "patch",
-        "pin",
-        "rollback"
-      ],
+      "matchDepTypes": ["dependencies"],
+      "matchManagers": ["npm"],
 
-      "groupName": "all dependencies",
-      "recreateClosed": true,
       "semanticCommitType": "fix"
     },
     {
-      "matchManagers": ["buildkite"],
-      "matchPackageNames": ["seek-jobs/gantry"],
+      "matchManagers": ["buildkite", "npm", "nvm"],
 
-      "commitMessageAction": "",
       "commitMessageExtra": "{{newValue}}",
-      "commitMessageTopic": "{{depName}}",
-      "schedule": "before 6:00 am every weekday"
+      "commitMessageTopic": "{{depName}}"
+    },
+    {
+      "excludePackageNames": ["braid-design-system", "sku", "skuba"],
+      "excludePackagePatterns": ["^@?seek", "seek$"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["patch", "minor"],
+
+      "enabled": false
+    },
+    {
+      "excludePackageNames": ["braid-design-system", "sku", "skuba"],
+      "excludePackagePatterns": ["^@?seek", "seek$", "^@types/"],
+      "matchDepTypes": ["devDependencies"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major"],
+
+      "schedule": "after 3:00 am and before 6:00 am on Tuesday"
+    },
+    {
+      "excludePackageNames": ["braid-design-system", "sku", "skuba"],
+      "excludePackagePatterns": ["^@?seek", "seek$", "^@types/"],
+      "matchDepTypes": ["peerDependencies"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major"],
+
+      "schedule": "after 3:00 am and before 6:00 am on Tuesday"
+    },
+    {
+      "excludePackagePatterns": ["^seek-jobs/", "^seek-oss/"],
+      "matchManagers": ["buildkite"],
+
+      "additionalBranchPrefix": "",
+      "commitMessageExtra": "",
+      "groupName": "buildkite plugins",
+      "recreateClosed": true,
+      "schedule": "after 3:00 am and before 6:00 am on Wednesday"
+    },
+    {
+      "matchManagers": ["docker-compose", "dockerfile"],
+
+      "commitMessageExtra": "",
+      "group": {
+        "commitMessageTopic": "{{groupName}}"
+      },
+      "groupName": "docker images",
+      "recreateClosed": true,
+      "schedule": "after 3:00 am and before 6:00 am on Wednesday"
+    },
+    {
+      "matchPackageNames": ["braid-design-system", "sku", "skuba"],
+      "matchPackagePatterns": ["^@?seek", "seek$"],
+
+      "prPriority": 98,
+      "schedule": "after 3:00 am and before 6:00 am every weekday"
+    },
+    {
+      "matchUpdateTypes": ["lockFileMaintenance"],
+
+      "automerge": true,
+      "prPriority": 99,
+      "schedule": "before 3:00 am every 2 weeks on Wednesday"
+    },
+    {
+      "matchUpdateTypes": ["pin"],
+
+      "automerge": true,
+      "prPriority": 99,
+      "schedule": "before 3:00 am every weekday"
     }
   ],
-  "buildkite": {
-    "additionalBranchPrefix": "",
-    "commitMessageExtra": ""
-  },
-  "docker": {
-    "commitMessageExtra": "",
-    "group": {
-      "commitMessageTopic": "{{groupName}}"
-    }
-  },
   "commitMessageAction": "",
-  "commitMessageExtra": "",
   "postUpdateOptions": ["yarnDedupeHighest"],
-  "prConcurrentLimit": 2,
+  "prConcurrentLimit": 3,
   "prNotPendingHours": 1,
-  "schedule": "before 6:00 am on Monday",
+  "rangeStrategy": "auto",
+  "schedule": "after 3:00 am and before 6:00 am on Monday and Friday",
   "semanticCommitScope": "",
-  "semanticCommitType": "deps",
-  "separateMajorMinor": false
+  "semanticCommitType": "deps"
 }
