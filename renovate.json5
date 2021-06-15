@@ -3,7 +3,7 @@
   packageRules: [
     {
       matchManagers: ['npm'],
-      matchPackageNames: ['@seek/indie-api-types'],
+      matchPackageNames: ['skuba'],
       matchUpdateTypes: ['major', 'minor', 'patch'],
 
       automerge: true,
