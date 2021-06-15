@@ -1,12 +1,3 @@
 {
-  extends: ['github>seek-oss/rynovate:non-critical'],
-  packageRules: [
-    {
-      matchManagers: ['npm'],
-      matchPackageNames: ['skuba'],
-      matchUpdateTypes: ['major', 'minor', 'patch'],
-
-      enabled: false,
-    },
-  ],
+  extends: ['github>seek-oss/rynovate'],
 }
