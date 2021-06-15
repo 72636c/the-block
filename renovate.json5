@@ -6,12 +6,7 @@
       matchPackageNames: ['skuba'],
       matchUpdateTypes: ['major', 'minor', 'patch'],
 
-      automerge: true,
-      commitMessageExtra: '{{newValue}}',
-      commitMessageTopic: '{{depName}}',
-      groupName: null,
-      prPriority: 99,
-      schedule: 'before 3:00 am every weekday',
+      enabled: false,
     },
   ],
 }
