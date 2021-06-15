@@ -3,11 +3,15 @@
   packageRules: [
     {
       matchManagers: ['npm'],
-      matchPackageNames: ['skuba'],
+      matchPackageNames: ['@seek/indie-api-types'],
       matchUpdateTypes: ['major', 'minor', 'patch'],
 
       automerge: true,
+      commitMessageExtra: '{{newValue}}',
+      commitMessageTopic: '{{depName}}',
       groupName: null,
+      prPriority: 99,
+      schedule: 'before 3:00 am every weekday',
     },
   ],
 }
