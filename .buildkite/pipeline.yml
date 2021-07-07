@@ -1,0 +1,6 @@
+configs:
+  plugins:
+    - &docker-ecr-cache
+      seek-oss/docker-ecr-cache#v1.9.0
+    - &docker
+      docker#v3.7.0
