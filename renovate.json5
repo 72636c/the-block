@@ -1,3 +1,28 @@
 {
-  extends: ['github>seek-oss/rynovate'],
+  lockFileMaintenance: {
+    enabled: true,
+  },
+  packageRules: [
+    {
+      matchUpdateType: [
+        'major',
+        'minor',
+        'patch',
+        'pin',
+        'digest',
+        'lockFileMaintenance',
+        'rollback',
+        'bump',
+      ],
+      enabled: false,
+    },
+    {
+      matchUpdateTypes: ['lockFileMaintenance'],
+      automerge: true,
+    },
+    {
+      matchUpdateTypes: ['lockFileMaintenance'],
+      schedule: 'before 3:00 am every 2 weeks on Wednesday',
+    },
+  ],
 }
