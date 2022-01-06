@@ -4,7 +4,7 @@
   },
   packageRules: [
     {
-      matchUpdateType: [
+      matchUpdateTypes: [
         'major',
         'minor',
         'patch',
