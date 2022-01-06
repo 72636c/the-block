@@ -10,7 +10,6 @@
         'patch',
         'pin',
         'digest',
-        'lockFileMaintenance',
         'rollback',
         'bump',
       ],
