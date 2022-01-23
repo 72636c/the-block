@@ -1,9 +1,11 @@
 {
   "dependencies": {
-    "lodash.memoize": "4.1.1"
+    "apollo-datasource": "3.3.0",
+    "apollo-datasource-rest": "3.5.0",
+    "apollo-server-env": "4.2.0",
+    "apollo-server-koa": "3.6.1",
+    "apollo-server-plugin-base": "3.5.0",
+    "apollo-server-types": "3.5.0"
   },
-  "description": "Renovate testbed",
-  "devDependencies": {
-    "ts-node-dev": "1.0.0-pre.63"
-  }
+  "description": "Renovate testbed"
 }
