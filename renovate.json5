@@ -1,11 +1,3 @@
 {
-  extends: ['github>seek-oss/rynovate'],
-  packageRules: [
-    {
-      matchManagers: ['npm'],
-      matchPackageNames: ['apollo-server-plugin-base', 'apollo-server-types'],
-
-      groupName: 'apollo-server',
-    },
-  ],
+  extends: ['github>seek-oss/rynovate', 'group:allApollographql'],
 }
