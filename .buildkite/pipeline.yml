@@ -1,0 +1,3 @@
+configs:
+  plugins:
+    - seek-jobs/gantry#v1.5.2
