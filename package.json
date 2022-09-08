@@ -1,4 +1,8 @@
 {
   "dependencies": {},
+  "devDependencies": {
+    "serverless": "3.0.0",
+    "serverless-plugin-datadog": "5.7.1"
+  },
   "description": "Renovate testbed"
 }
