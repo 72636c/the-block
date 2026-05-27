@@ -10,7 +10,7 @@
         "docker.io/library/node",
         "public.ecr.aws/docker/library/node"
       ],
-      "matchCurrentValue": "/^24(?!.*-alpine)/",
+      "matchCurrentValue": "/^24$/",
       "replacementName": "domain.invalid/node",
       "replacementVersion": "latest",
       "schedule": ["at any time"],
