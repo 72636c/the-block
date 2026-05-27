@@ -13,7 +13,7 @@
       "matchCurrentValue": "/^24(?!.*-alpine)/",
       "replacementName": "node",
       "replacementVersion": "latest",
-      "schedule": ["at any time"],
+      "schedule": "at any time",
       "minimumReleaseAgeBehaviour": "timestamp-optional",
       "prConcurrentLimit": 0,
       "prPriority": 100
